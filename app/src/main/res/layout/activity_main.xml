@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zony.download.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/download_progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/download_state"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/download_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/download_state"
+        android:layout_alignRight="@+id/download_state"
+        android:layout_below="@+id/download_state"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="cancelDown"
+        android:padding="5dp"
+        android:text="CANCEL" />
+
+    <ToggleButton
+        android:id="@+id/download_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textOff="START"
+        android:textOn="PAUSE" />
+
+    <TextView
+        android:id="@+id/download_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/download_percent"
+        android:text="0M/0M" />
+
+    <TextView
+        android:id="@+id/download_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/download_progressbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/download_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/download_cancel"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="downloadList"
+        android:onClick="downloadList"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/downloaded_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/download_cancel"
+        android:layout_toRightOf="@id/download_list"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="downloadedList"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

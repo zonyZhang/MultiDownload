@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zony.download.fragment.DownloadListLocalCompleteFragment">
+
+    <Button
+        android:id="@+id/downloadlistlocal_complete_btn_del_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="delete_all" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/downloadlistlocal_complete_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/downloadlistlocal_complete_btn_del_all" />
+
+</RelativeLayout>
